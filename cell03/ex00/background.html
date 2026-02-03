@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Background</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="background.css">
+</head>
+
+<body>
+    <button onclick="changecolor()">Click me</button>
+</body>
+<script>
+    function changecolor() {
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+
+        var randomColor = "rgb(" + r + "," + g + "," + b + ")";
+        document.documentElement.style.setProperty('--main-bg-color', randomColor);
+    }
+</script>
+
+</html>

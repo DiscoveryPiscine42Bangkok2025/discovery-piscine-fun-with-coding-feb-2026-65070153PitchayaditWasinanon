@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+    body {
+        font-family: monospace;
+        font-size: 2vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #background {
+        box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+        border-radius: 2vw;
+    }
+
+    #title {
+        padding: 5%;
+    }
+
+    #calculate_area {
+        padding: 5%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    #value1 {
+        width: 100%;
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    #value2 {
+        width: 100%;
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    #symbol {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 2vw;
+    }
+
+    #button {
+        border: none;
+        padding: 2%;
+        margin-bottom: 5%;
+        width: 50%;
+        border-radius: 4vw;
+        font-size: 2vw;
+        background: red;
+        color: white;
+    }
+</style>
+
+<body>
+    <center>
+        <div id="background">
+            <h1 id="title">Calculator</h1>
+            <div id="calculate_area">
+                <input id="value1" type="number" value="0">
+
+                <select id="symbol">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+
+                <input id="value2" type="number" value="0">
+            </div>
+            <button type="button" id="button" onclick="calculator()">Try me!</button>
+
+        </div>
+    </center>
+</body>
+<script>
+    function calculator() {
+        let first_value = parseInt(document.getElementById("value1").value);
+        let second_value = parseInt(document.getElementById("value2").value);
+        let symbol = document.getElementById("symbol").value;
+        if (first_value < 0 || second_value < 0) {
+            alert("Error :(");
+        } else if (symbol == "+") {
+            alert(first_value+second_value);
+        } else if (symbol == "-") {
+            alert(first_value-second_value)
+        } else if (symbol == "*") {
+            alert(first_value*second_value);
+        } else if (symbol == "/") {
+            if (second_value == 0) {
+                alert("It's over 9000!");
+            } else {
+                alert(first_value/second_value);
+            }
+        } else if (symbol == "%") {
+            if (second_value == 0) {
+                alert("It's over 9000!");
+            } else {
+                alert(first_value%second_value);
+            }
+        }
+    }
+
+</script>
+
+</html>

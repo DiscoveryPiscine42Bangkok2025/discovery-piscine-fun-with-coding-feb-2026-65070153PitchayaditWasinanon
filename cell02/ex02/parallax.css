@@ -1,0 +1,45 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-1 {
+    background-image: url("waterfall1.png");
+}
+
+.parallax-2 {
+    background-image: url("waterfall2.png");
+}
+
+.message {
+    color: black;
+    background-color: white;
+    font-size: 32px;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.rest_content {
+    height: 300px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    text-align: center;
+}

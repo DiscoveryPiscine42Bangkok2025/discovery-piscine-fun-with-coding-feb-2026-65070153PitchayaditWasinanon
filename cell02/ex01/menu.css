@@ -1,0 +1,17 @@
+#menu_name:hover #menu_ingredient {
+    display: block;
+}
+
+#menu_ingredient {
+    display: none;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-shadow: 0 4px 10px black;
+    overflow: hidden;
+}
+
+div #menu_ingredient {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
