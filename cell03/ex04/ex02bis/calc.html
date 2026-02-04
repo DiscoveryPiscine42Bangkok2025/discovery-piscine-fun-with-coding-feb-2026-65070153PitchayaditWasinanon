@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: monospace;
+            font-size: 2vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #background {
+            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 2vw;
+        }
+
+        #title {
+            padding: 5%;
+        }
+
+        #calculate_area {
+            padding: 5%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        #value1,
+        #value2 {
+            width: 100%;
+            font-size: 2vw;
+            text-align: center;
+        }
+
+        #symbol {
+            margin-left: 5%;
+            margin-right: 5%;
+            font-size: 2vw;
+        }
+
+        #button {
+            border: none;
+            padding: 2%;
+            margin-bottom: 5%;
+            width: 50%;
+            border-radius: 4vw;
+            font-size: 2vw;
+            background: red;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div id="background">
+            <h1 id="title">Calculator</h1>
+
+            <div id="calculate_area">
+                <input id="value1" type="number" value="0">
+
+                <select id="symbol">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+
+                <input id="value2" type="number" value="0">
+            </div>
+
+            <button type="button" id="button">Try me!</button>
+        </div>
+    </center>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#button").click(function () {
+                let first = parseInt($("#value1").val());
+                let second = parseInt($("#value2").val());
+                let symbol = $("#symbol").val();
+
+                if (first < 0 || second < 0) {
+                    alert("Error :(");
+                }
+                else if (symbol === "+") {
+                    alert(first + second);
+                }
+                else if (symbol === "-") {
+                    alert(first - second);
+                }
+                else if (symbol === "*") {
+                    alert(first * second);
+                }
+                else if (symbol === "/") {
+                    if (second === 0) {
+                        alert("It's over 9000!");
+                    } else {
+                        alert(first / second);
+                    }
+                }
+                else if (symbol === "%") {
+                    if (second === 0) {
+                        alert("It's over 9000!");
+                    } else {
+                        alert(first % second);
+                    }
+                }
+            });
+
+            setInterval(function () {
+                alert("Please, use me...");
+            }, 30000);
+
+        });
+    </script>
+
+</body>
+
+</html>

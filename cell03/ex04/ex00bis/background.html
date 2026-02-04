@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Background</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <button id="clicktorandom">Click me</button>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#clicktorandom").click(function () {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+
+            var randomColor = "rgb(" + r + "," + g + "," + b + ")";
+            $("body").css("background-color", randomColor);
+        });
+    })
+</script>
+
+</html>

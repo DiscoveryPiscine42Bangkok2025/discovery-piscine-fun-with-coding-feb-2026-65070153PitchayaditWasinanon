@@ -89,25 +89,28 @@
         if (first_value < 0 || second_value < 0) {
             alert("Error :(");
         } else if (symbol == "+") {
-            alert(first_value+second_value);
+            alert(first_value + second_value);
         } else if (symbol == "-") {
-            alert(first_value-second_value)
+            alert(first_value - second_value)
         } else if (symbol == "*") {
-            alert(first_value*second_value);
+            alert(first_value * second_value);
         } else if (symbol == "/") {
             if (second_value == 0) {
                 alert("It's over 9000!");
             } else {
-                alert(first_value/second_value);
+                alert(first_value / second_value);
             }
         } else if (symbol == "%") {
             if (second_value == 0) {
                 alert("It's over 9000!");
             } else {
-                alert(first_value%second_value);
+                alert(first_value % second_value);
             }
         }
     }
+    setInterval(function () {
+        alert("Please, use me...");
+    }, 30000);
 
 </script>
 
