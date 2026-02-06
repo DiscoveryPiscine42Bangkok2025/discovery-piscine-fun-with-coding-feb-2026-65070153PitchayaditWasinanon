@@ -10,113 +10,216 @@
 </head>
 
 <body>
-
+    <!-- ===================== Navbar ===================== -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow" id="navbar">
+        <!-- แถบ Navbar
+             - navbar-expand-lg: ขยาย Navbar เมื่อขนาดจอใหญ่
+             - navbar-dark bg-dark: ใช้ background สีเทาเข้ม
+             - fixed-top: ตรึงเมนูไว้ด้านบนเสมอ
+             - shadow: เพิ่ม box-shadow -->
+
         <div class="container">
+            <!-- container ช่วยจัดให้อยู่ตรงกลาง -->
+
             <a class="navbar-brand" href="index.html">My Portfolio</a>
+            <!-- โลโก้ คลิกแล้วกลับไปเลือกดู Profile -->
+
             <button class="navbar-toggler" type="button" id="navToggle">
+                <!-- ปุ่มสำหรับหน้าจอเล็ก -->
+
                 <span class="navbar-toggler-icon"></span>
+                <!-- ไอคอนเส้น 3 ขีด -->
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- ส่วนเมนูที่สามารถยุบ/ขยายได้ -->
+
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link btn-animate" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link btn-animate" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link btn-animate" href="#showcase">Showcase</a></li>
-                    <li class="nav-item"><a class="nav-link btn-animate" href="#contact">Contact</a></li>
+                    <!-- รายการเมนู
+                         ms-auto = ดันเมนูไปชิดขวา -->
+
+                    <li class="nav-item">
+                        <a class="nav-link btn-animate" href="index.html">Home</a>
+                        <!-- เมนู Home กลับไปหน้าเลือก Profile -->
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link btn-animate" href="#about">About</a>
+                        <!-- เมนู About เลื่อนไปยัง section about เมื่อคลิ๊ก -->
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link btn-animate" href="#showcase">Showcase</a>
+                        <!-- เมนู Showcase เลื่อนไปยัง section showcase เมื่อคลิ๊ก -->
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link btn-animate" href="#contact">Contact</a>
+                        <!-- เมนู Contact เลื่อนไปยัง section contact เมื่อคลิ๊ก -->
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section id="title" class="">
+    <!-- ===================== Title Section ===================== -->
+    <section id="title">
+        <!-- Section ส่วนหัวของเว็บไซต์ -->
+
         <div id="text_area">
+            <!-- กล่องครอบข้อความ -->
+
             <div id="title_text">
                 Welcome to my Minimal Creation!
+                <!-- ข้อความต้อนรับ -->
             </div>
         </div>
-
     </section>
 
+    <!-- ===================== About Section ===================== -->
     <section id="about" class="container">
+
+        <!-- จัดเนื้อหาให้อยู่ตรงกลาง -->
         <center>
             <div class="row align-items-center h-100 w-100">
+                <!-- align-items-center = จัดให้อยู่กลางหน้าจอในแนวตั้ง -->
+
                 <div class="col-md-4 text-center p-md-2">
+                    <!-- คอลัมซ้าย แสดงรูปโปรไฟล์ -->
+
                     <img src="pitchayadit.png" class="rounded-circle img-fluid hover-zoom shadow" alt="Profile Pic"
                         style="max-width: 250px;">
+                    <!-- รูปโปรไฟล์
+                         - rounded-circle: ทำให้ขอบเป็นวงกลม
+                         - img-fluid: responsive
+                         - shadow: เพิ่ม shadow-box -->
                 </div>
+
                 <div class="col-md-8 text-center text-md-start">
+                    <!-- คอลัมขวา แสดงข้อความ -->
+
                     <h2 class="display-4 fw-bold">About Me</h2>
+                    <!-- หัวข้อ About Me -->
+
                     <hr class="w-100 w-md-25 my-4">
-                    <p class="lead" id="text"><b>Pitchayadit Wasinanon</b> (pwasinan)</p>
-                    <p id="text"><b>Name : </b>พิชญดิฏฐ์ วศินานนท์</p>
-                    <p id="text"><b>ความสนใจ: </b>Drawing, Coding, Handcraft</p>
+
+                    <p class="lead" id="text">
+                        <b>Pitchayadit Wasinanon</b> (pwasinan)
+                    </p>
+
+                    <p id="text">
+                        <b>Name : </b>พิชญดิฏฐ์ วศินานนท์
+                    </p>
+
+                    <p id="text">
+                        <b>ความสนใจ: </b>Drawing, Coding, Handcraft
+                    </p>
                 </div>
             </div>
         </center>
     </section>
 
+    <!-- ===================== Showcase Section ===================== -->
     <section id="showcase" class="bg-light">
+
         <div class="container">
-            <h2 class="text-center mb-5 display-5 fw-bold text-white" id="showcase_text">Showcase & Skills</h2>
+
+            <h2 class="text-center mb-5 display-5 fw-bold text-white" id="showcase_text">
+                Showcase & Skills
+            </h2>
+
             <div class="row gy-3">
-                <div class="col-md-4 rounded">
-                    <div class="card mb-4 hover-zoom border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <h5 class="card-title fw-bold text-primary">HTML, CSS & JS</h5>
-                            <p class="card-text text-muted">สร้างหน้าเว็บอย่างง่ายได้ ตกแต่งหน้าเว็บได้</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- แถวของ card gy-3 = ระยะห่างแนวตั้ง -->
 
-                <div class="col-md-4 rounded">
-                    <div class="card mb-4 hover-zoom border-0 shadow-sm h-100">
+                <div class="col-md-4">
+                    <div class="card hover-zoom border-0 shadow-sm h-100">
                         <div class="card-body text-center p-4">
-                            <h5 class="card-title fw-bold text-success">Drawing</h5>
-                            <p class="card-text text-muted">วาดเลียบแบบได้พอสมควร + วาด Stickman</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 rounded">
-                    <div class="card mb-4 hover-zoom border-0 shadow-sm h-100">
-                        <div class="card-body text-center p-4">
-                            <h5 class="card-title fw-bold text-info">Multi-Framework</h5>
-                            <p class="card-text text-muted">เคยใช้งาน Framework อย่าง Vue.js, React, Django และอื่นๆ
+                            <h5 class="card-title fw-bold text-primary">
+                                HTML, CSS & JS
+                            </h5>
+                            <p class="card-text text-muted">
+                                สร้างหน้าเว็บอย่างง่ายได้ ตกแต่งหน้าเว็บได้
                             </p>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-4">
+                    <div class="card hover-zoom border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <h5 class="card-title fw-bold text-success">
+                                Drawing
+                            </h5>
+                            <p class="card-text text-muted">
+                                วาดเลียบแบบได้พอสมควร + วาด Stickman
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card hover-zoom border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <h5 class="card-title fw-bold text-info">
+                                Multi-Framework
+                            </h5>
+                            <p class="card-text text-muted">
+                                เคยใช้งาน Framework อย่าง Vue.js, React, Django และอื่นๆ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- ===================== Contact Section ===================== -->
     <section id="contact" class="container text-center">
+
         <div class="py-5">
+            <!-- padding แนวตั้ง -->
+
             <h2 class="display-5 fw-bold mb-4">Contact Me</h2>
+
             <p class="lead mb-5">ช่องทางการติดต่อของผม</p>
 
             <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="https://github.com/DiscoveryPiscine42Bangkok2025/discovery-piscine-fun-with-coding-feb-2026-65070153PitchayaditWasinanon.git"
-                    class="btn btn-dark btn-lg btn-animate px-4 py-2">GitHub</a>
-                <a href="https://www.facebook.com/darkrider.yt.7/"
-                    class="btn btn-primary btn-lg btn-animate px-4 py-2">Facebook</a>
-                <a href="mailto:65070153@kmitl.ac.th" class="btn btn-danger btn-lg btn-animate px-4 py-2">Email</a>
+                <!--  flex-wrap: ให้ขึ้นบรรทัดใหม่ได้ -->
+
+                <a href="https://github.com/..." class="btn btn-dark btn-lg btn-animate px-4 py-2">
+                    GitHub
+                </a>
+
+                <a href="https://www.facebook.com/..." class="btn btn-primary btn-lg btn-animate px-4 py-2">
+                    Facebook
+                </a>
+
+                <a href="mailto:65070153@kmitl.ac.th" class="btn btn-danger btn-lg btn-animate px-4 py-2">
+                    Email
+                </a>
             </div>
         </div>
     </section>
 
-
+    <!-- ===================== JavaScript ===================== -->
     <script>
+        // ปุ่ม toggle navbar
         const toggleBtn = document.getElementById("navToggle");
+
+        // เมนู navbar
         const navbar = document.getElementById("navbarNav");
 
+        // เมื่อคลิกปุ่ม menu
         toggleBtn.addEventListener("click", () => {
+            // สลับการแสดงผลเมนู (เปิด/ปิด)
             navbar.classList.toggle("show");
         });
 
-        // คลิกเมนูแล้วปิด navbar (มือถือ)
+        // เมื่อคลิกลิงก์เมนู
         document.querySelectorAll(".nav-link").forEach(link => {
             link.addEventListener("click", () => {
+                // ปิดเมนู navbar
                 navbar.classList.remove("show");
             });
         });
