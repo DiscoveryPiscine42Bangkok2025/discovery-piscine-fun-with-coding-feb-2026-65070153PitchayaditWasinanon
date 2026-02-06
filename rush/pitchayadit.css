@@ -1,0 +1,90 @@
+html {
+    /* เลื่อนแล้ว ให้เว้นที่ด้านบน 70px เพื่อให้ navbar1 มีพื้นที่ */
+    scroll-padding-top: 70px;
+}
+
+body {
+    /* ลบ padding-top เดิมออก เพราะเราใช้ scroll-padding-top แล้ว */
+    /* แต่ยังคงไว้กันเนื้อหาชนเฉยๆ */
+    padding-top: 56px;
+}
+
+/* --- 2. แก้เรื่อง Section ติดกัน --- */
+section {
+    padding: 80px 0;
+    /* เพิ่มระยะห่างบนล่างให้มากขึ้น */
+    min-height: 60vh;
+    /* บังคับให้แต่ละส่วนสูงอย่างน้อย 60% ของหน้าจอ */
+}
+
+#navbar {
+    font-size: 1.5vw;
+}
+
+/* --- Animation --- */
+.hover-zoom {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-animate {
+    transition: transform 0.2s;
+}
+
+.btn-animate:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+#text {
+    font-size: x-large;
+}
+
+#title {
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/051/554/919/original/tyler-smith-bambooforestgif01.gif?1657599652");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#text_area {
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 2vw;
+}
+
+#title_text {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    text-align: center;
+    padding: 4%;
+}
+
+#showcase {
+    background-image: url("https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyOG9uM2JvaHVpeDY3ZDNwemd1dTRlZXJha2lraDl0czRscHdneGJoayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/2bICILGf7ps51ZYJ6l/giphy-downsized-medium.gif");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+#showcase_text {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 2%;
+    border-radius: 4vw;
+}
